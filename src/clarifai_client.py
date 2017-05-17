@@ -10,4 +10,8 @@ class Clarifai():
 
     def test(self):
         res = self.app.tag_urls(['https://samples.clarifai.com/metro-north.jpg'])
-        print(res)
+        if res['status']['description'] == 'Ok':
+            print("COOL!")
+            concepts = res['outputs'][0]['data']['concepts']
+            for concept in concepts:
+                print(concept['name'], concept['value'])
