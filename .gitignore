@@ -101,6 +101,6 @@ ENV/
 .mypy_cache/
 
 #Application settings
-settings.json
+settings.py
 #stuff
 TODO
