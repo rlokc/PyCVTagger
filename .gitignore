@@ -101,8 +101,8 @@ ENV/
 .mypy_cache/
 
 #Application settings
-settings.py
+*settings.py
 #stuff
-TODO
+*TODO
 #vim swap files
 *.swp
