@@ -1,8 +1,0 @@
-{
-    "settings" : {
-        "clarifai_id" : "YOUR_CLARIFAI_ID",
-        "clarifai_secret": "YOUR_CLARIFAI_SECRET",
-        "google_id" : "YOUR_GOOGLE_ID",
-        "google_secret" : "YOUR_GOOGLE_SECRET"
-    }
-}
