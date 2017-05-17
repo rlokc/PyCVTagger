@@ -8,16 +8,22 @@ class Clarifai():
 
         self.app = ClarifaiApp(self.api_id, self.api_secret)
 
-    def tag(self, files):
-        raw_tags = self.app.tag_files(files)
+    def tag(self, filenames):
+        raw_tags = self.app.tag_files(filenames)
         res = {}
         if raw_tags['status']['description'] == 'Ok':
-            # TODO: right now it parses only one image
-            tags = raw_tags['outputs'][0]['data']['concepts']
-            for tag in tags:
-                res[tag['name']] = tag['value']
+            tagged_files = raw_tags['outputs']
+            for index, f in enumerate(tagged_files):
+                tags = f['data']['concepts']
+                tag_dict = {}
+                for tag in tags:
+                    tag_dict[tag['name']] = tag['value']
+                filename = filenames[index]
+                res[filename] = tag_dict
         return res
 
+    def tag_raw(self, files):
+        return self.app.tag_files(files)
 
     def test(self):
         res = self.app.tag_urls(['https://samples.clarifai.com/metro-north.jpg'])
