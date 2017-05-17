@@ -6,5 +6,7 @@ settings = Settings()
 clarifai = Clarifai(settings.CLARIFAI_ID, settings.CLARIFAI_SECRET)
 gcvision = GCVision(settings.GOOGLE_KEY)
 
-clarifai.test()
+res = clarifai.tag(["/Users/rlokc/Pictures/20170305160550_1.jpg"])
+for k,v in res.items():
+    print(k, ":", v)
 
