@@ -104,3 +104,5 @@ ENV/
 settings.py
 #stuff
 TODO
+#vim swap files
+*.swp
