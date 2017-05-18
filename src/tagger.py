@@ -4,6 +4,7 @@ import os
 from settings import Settings
 from clarifai_client import Clarifai
 from gcvision_client import GCVision
+import xmlexporter
 
 EXTENSIONS = ['jpg', 'bmp', 'png', 'tiff', 'jpe', 'jpeg']
 
@@ -57,3 +58,5 @@ for path in args:
 
 result = clarifai.tag(queue)
 tidy_print(result)
+
+xmlexporter.to_xml_file(result, "")
