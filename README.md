@@ -1,2 +1,19 @@
 # PyCVTagger
-Image tagger utilizing Clarifai and Google Cloud Vision APIs
+Расстановщик тэгов на изображениях, использующий Clarifai API
+
+# Зависимости
+*Зависимости нужно ставить только для запаковки, в конце получится исполняемый файл с библиотеками, которые можно распространять пользователям*
+
+[Компилятор Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools)  (Если на компьютере установлена Visual Studio 2015 с поддержкой "Общих инструментов для Visual C++ 2015 (Common Tools for Visual C++ 2015)", устанавливать не надо, если поддержки C++ нет, необходимо добавить ее, изменив установку в Программах и Компонентах)
+
+[Python 3.6](https://www.python.org/downloads/) 
+
+После установки Python выполнить в командной строке (если python не был установлен в PATH, то надо находиться в директории питона):
+```
+pip install clarifai lxml
+pip install py2exe (для упаковки в .exe на Windows)
+```
+
+После установки зависимостей и регистрации приложения на Clarifai, вставьте полученные id и secret в файл settings.py
+
+# Упаковка в .exe для Windows
