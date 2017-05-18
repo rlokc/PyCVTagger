@@ -6,7 +6,7 @@
 
 [Компилятор Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools)  (Если на компьютере установлена Visual Studio 2015 с поддержкой "Общих инструментов для Visual C++ 2015 (Common Tools for Visual C++ 2015)", устанавливать не надо, если поддержки C++ нет, необходимо добавить ее, изменив установку в Программах и Компонентах)
 
-[Python 3.6](https://www.python.org/downloads/) 
+[Python 3.4.4](https://www.python.org/downloads/release/python-344/) (Важно, чтобы версия была не боле 3.4, так как на более поздних запаковщик py2exe официально не поддерживается) 
 
 После установки Python выполнить в командной строке (если python не был установлен в PATH, то надо находиться в директории питона):
 ```
@@ -14,6 +14,18 @@ pip install clarifai lxml
 pip install py2exe (для упаковки в .exe на Windows)
 ```
 
+# Если во время установки Pillow выскакивает ошибка UnicodeDecodeError: 'utf-8' codec can't decode byte...
+
+Ошибка возникает из-за русской локали, в частности языка выкидываемых предупреждений от компилятора.
+Решение: установить Pillow==2.9.0 отдельно, при этом изменить виновный файл, в котором происходит декодинг (в дефолтной установке это будет `AppData\Local\Programs\Python\Python(версия-архитектура)\Lib\site-packages\pip\compat\__init__.py)` и заменить строчку `s.decode('utf_8')` на `s.decode('windows-1251')`
+
+После этого выполнить
+
+  ```pip install pillow==2.9.0```
+  
+По окончании установки вернуть s.decode обратно
+
+# После регистрации приложения в Clarifai
 После установки зависимостей и регистрации приложения на Clarifai, вставьте полученные id и secret в файл settings.py
 
 # Упаковка в .exe для Windows
