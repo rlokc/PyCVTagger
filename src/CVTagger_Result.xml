@@ -1,0 +1,46 @@
+<images>
+  <image filename="/Users/rlokc/Pictures/20170305160550_1.jpg">
+    <tag prob="0.99728626" value="закат"/>
+    <tag prob="0.99243295" value="солнце"/>
+    <tag prob="0.98895645" value="вырисовываться"/>
+    <tag prob="0.986271" value="небо"/>
+    <tag prob="0.98600674" value="рассвет"/>
+    <tag prob="0.96293926" value="природа"/>
+    <tag prob="0.95903915" value="вечер"/>
+    <tag prob="0.9561008" value="сумерки"/>
+    <tag prob="0.9455007" value="лето"/>
+    <tag prob="0.9443145" value="пейзаж"/>
+    <tag prob="0.9100733" value="легкий"/>
+    <tag prob="0.89182234" value="умеренный климат"/>
+    <tag prob="0.8859972" value="нет человек"/>
+    <tag prob="0.88588226" value="путешествовать"/>
+    <tag prob="0.87513024" value="на открытом воздухе"/>
+    <tag prob="0.8695861" value="яркий"/>
+    <tag prob="0.8517623" value="фон"/>
+    <tag prob="0.81421924" value="взгляд"/>
+    <tag prob="0.8100985" value="цвет"/>
+    <tag prob="0.7951578" value="облако"/>
+  </image>
+  <image filename="/Users/rlokc/Pictures/bootchart.png">
+    <tag prob="0.98502994" value="нет человек"/>
+    <tag prob="0.9658121" value="пустой"/>
+    <tag prob="0.9501952" value="бумага"/>
+    <tag prob="0.93833065" value="ретро"/>
+    <tag prob="0.93136966" value="дизайн (оформление)"/>
+    <tag prob="0.9129499" value="полоса"/>
+    <tag prob="0.8821687" value="иллюстрация"/>
+    <tag prob="0.8786223" value="грязный"/>
+    <tag prob="0.8735934" value="современный"/>
+    <tag prob="0.8733352" value="вектор"/>
+    <tag prob="0.8653983" value="эскиз"/>
+    <tag prob="0.85836077" value="неаккуратный"/>
+    <tag prob="0.8562317" value="графический дизайн"/>
+    <tag prob="0.8435433" value="искусство"/>
+    <tag prob="0.8258766" value="рамка"/>
+    <tag prob="0.824184" value="шаблон"/>
+    <tag prob="0.82091486" value="семья"/>
+    <tag prob="0.81820214" value="вертикальный"/>
+    <tag prob="0.8158176" value="украшение"/>
+    <tag prob="0.8139056" value="художественный"/>
+  </image>
+</images>

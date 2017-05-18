@@ -10,7 +10,7 @@ EXTENSIONS = ['jpg', 'bmp', 'png', 'tiff', 'jpe', 'jpeg']
 
 def tidy_print(d):
     for f, tags in d.items():
-        print("\nТеги для файла", f, ':\n')
+        print("\nТеги для файла", f, ':')
         for k,v in tags.items():
             print(k, ':', v)
 
@@ -57,6 +57,8 @@ for path in args:
         crawl(path)
 
 result = clarifai.tag(queue)
-tidy_print(result)
+if xml_out:
+    xmlexporter.to_xml_file(result, "CVTagger_Result.xml")
+else:
+    tidy_print(result)
 
-xmlexporter.to_xml_file(result, "")
