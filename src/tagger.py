@@ -8,6 +8,13 @@ import xmlexporter
 
 EXTENSIONS = ['jpg', 'bmp', 'png', 'tiff', 'jpe', 'jpeg']
 
+HELPSTRING = '''Установщик тегов на изображения с помощью сервиса ClarifAI
+Использование: передать через аргументы пути к изображениям или папкам, содержащим изображения
+
+Аргументы:
+-r - рекурсивное сканирование папок
+-xml - вывод результатов в XML файл CVTagger_Result.xml'''
+
 def tidy_print(d):
     for f, tags in d.items():
         print("\nТеги для файла", f, ':')
@@ -39,6 +46,10 @@ queue = []
 settings = Settings()
 clarifai = Clarifai(settings.CLARIFAI_ID, settings.CLARIFAI_SECRET)
 gcvision = GCVision(settings.GOOGLE_KEY)
+
+if len(sys.argv) == 1:
+    print(HELPSTRING)
+    sys.exit(0)
 
 recursive = False
 xml_out = False
