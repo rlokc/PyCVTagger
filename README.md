@@ -11,7 +11,7 @@
 После установки Python выполнить в командной строке (если python не был установлен в PATH, то надо находиться в директории питона):
 ```
 pip install clarifai
-pip install py2exe (для упаковки в .exe на Windows)
+pip install cx_freeze (для упаковки в .exe на Windows)
 ```
 
 [Скачать бинарную сборку lxml](http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml) Обязательно версию с `cp34` в имени, архитектура соответствующая архитектуре установленного питона
@@ -28,7 +28,7 @@ pip install lxml‑3.7.3‑cp34‑cp34m‑win32.whl
 # Упаковка в .exe для Windows
 Передвигаемся в консоли в папку с кодом (src), после чего исполняем там
 ```
-python setup.py py2exe
+python setup.py build
 ```
 
 Если все произошло успешно, то должна создаться папка dist, которая включает в себя всю программу с исполняемым файлом tagger.exe. 
